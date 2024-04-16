@@ -13,8 +13,8 @@ const Modal = ({ isOpen, onClose, children }) => {
     };
 
     if (isOpen) document.addEventListener("mousedown", handleOutsideClick);
-    
-    return () =>   document.removeEventListener("mousedown", handleOutsideClick);
+    // clear function in unMount Phase
+    return () =>  document.removeEventListener("mousedown", handleOutsideClick);
     
   }, [isOpen, onClose]);
 

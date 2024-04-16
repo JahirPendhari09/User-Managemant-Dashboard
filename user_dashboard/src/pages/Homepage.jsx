@@ -5,6 +5,7 @@ import "../App.css";
 import { Modal } from "../components/Modal";
 import { deleteUserDetails, getUsersDetails, patchUsersData, postNewUserDetails } from "../Actions/action";
 import Button from "../components/Button";
+import Labels from "../components/Labels";
 
 export const initialStateTask = { name: '', email: '',department:'' }
 
@@ -123,15 +124,15 @@ const Homepage = () => {
                         <h2 className="text-center text-2xl text-orange-400">Add New User</h2>
                         <form class="max-w-sm mx-auto" onSubmit={submitNewTodo}>
                             <div>
-                                <label className="block mb-2  text-left text-sm font-medium text-gray-900 dark:text-black">Enter firstName and LastName</label>
+                                <Labels text="Enter firstName and LastName"/>
                                 <input rows="4" name="name" defaultValue={formData.name} onChange={handleChange} className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a name here..." required />
                             </div>
                             <div>
-                                <label className="block mb-2 mt-2 text-left text-sm font-medium text-gray-900 dark:text-black">Enter Email</label>
+                                <Labels text ="Enter Email"/>
                                 <input rows="4" name="email" defaultValue={formData.email} onChange={handleChange} className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a email here..." required/>
                             </div>
                             <div>
-                                <label className="block mb-2 mt-2 text-left text-sm font-medium text-gray-900 dark:text-black">Enter Department</label>
+                                <Labels text="Enter Department"/>
                                 <input rows="4" name="department" defaultValue={formData.department} onChange={handleChange} className="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a department here..." required/>
                             </div>
                             <input type="Submit" defaultValue="Submit" className="block p-2.5 w-full text-sm text-white bg-green-500 rounded mt-5 cursor-pointer" />
