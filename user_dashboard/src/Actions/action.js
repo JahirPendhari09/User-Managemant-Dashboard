@@ -18,11 +18,10 @@ export const postNewUserDetails = (newUser) => {
 };
 
 export const patchUsersData = (id,updatedUser) => {
+    return (
     axios.patch(`https://jsonplaceholder.typicode.com/users/${id}`,updatedUser)
-        .then(res=> {
-           console.log(res)
-        })
-        .catch(err=> console.log(err)
+        .then(res=> res)
+        .catch(err=> err)
     )
 };
 
@@ -35,10 +34,9 @@ export const deleteUserDetails = (id) => {
             return res
           })
           .catch(err=> {
-            console.log(err)
+            // console.log(err)
             return err
-        })
-        
+        })  
     )
 };
 
